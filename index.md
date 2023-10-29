@@ -1,13 +1,14 @@
 ---
-title: Jekyll Serif Theme
+title: OSD Dialler
 layout: home
-description: Jekyll Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+description: Відкрийте для себе потужний інструмент для автоматизації зв'язку з вашими клієнтами!
 intro_image: "images/illustrations/pointing.svg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
-# Serif - A Jekyll Business Theme.
+# Автоінформатор
 
-Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+Відкрийте для себе потужний інструмент для автоматизації зв'язку з вашими клієнтами! Наш телефонний автоінформатор - це ефективний спосіб швидкого автоматичного сповіщення. <br>
+Налаштуй свого робота!

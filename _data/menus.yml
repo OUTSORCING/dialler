@@ -1,21 +1,26 @@
 main:
-  - name: "Services"
+  - name: "Головна"
+    url: "/"
+    weight: 1
+  - name: "Можливості"
     url: "/services/"
     weight: 2
-  - name: "Team"
-    url: "/team/"
-    weight: 3
-  - name: "About"
+
+  # - name: "Команда"
+  #   url: "/team/"
+  #   weight: 3
+
+  - name: "Про нас"
     url: "/about/"
     weight: 4
-  - name: "Contact"
+  - name: "Контакти"
     url: "/contact/"
     weight: 5
 
 footer:
-  - name: "Home"
+  - name: "Головна"
     url: "/"
     weight: 1
-  - name: "Contact"
+  - name: "Контакти"
     url: "/contact/"
     weight: 2

@@ -1,8 +1,14 @@
 <div class="call">
   <div class="call-box-top">
     {% if site.data.contact.phone %}
-        <div class="call-phone"><strong>Phone: </strong> {{ site.data.contact.phone }} </div>
+        <div class="call-phone">Розрахувати та оформити заявку</div>
     {% endif %}
+    {% if site.data.contact.phone %}
+    <strong>Або телефонуй: </strong>
+    <a href="tel:{{ site.data.contact.phone }}">{{ site.data.contact.phone }}</a>
+    {% endif %}
+
+<!-- 
     {% if site.data.contact.email %}
     <div class="call-email"><strong>Email: </strong>
       <a href="mailto:{{ .site.data.contact.email }}">
@@ -10,10 +16,11 @@
       </a>
     </div>
     {% endif %}
+     -->
   </div>
     {% if include.show_button %}
       <div class="call-box-bottom">
-        <a href="{{ site.data.contact.contact_button_link }}" class="button">Contact</a>
+        <a href="https://z.osd24.com/calc_dialler/calc_dialer.php" target="_blank" class="button">Розрахувати</a>
       </div>
     {% endif %}
 </div>
