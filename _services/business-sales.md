@@ -1,87 +1,118 @@
 ---
-title: "Голос IVR"
+title: "Як прорахувати вартість?"
 date: 2019-01-28T15:15:26+10:00
 weight: 2
 ---
 
-Cyanee nec pedicis positi. Esse et diem forte quoque et ieiunia
-vixque dixit negari _ullis stamina_: trahit. Tanta rictus in mitia causa, Phoebo
-nisi mater acta serpens cacumen dapibus caeli umidus detegeret viri conlato
-cadet
+Для того аби прорахувати вартість наших послуг скористайтесть нашим [калькулятором](https://z.osd24.com/calc_dialler/calc_dialer.php). Нижче буде опис кожного рівня калькулятору для кращого розуміння за що саме ви будете платити свої кошти.
 
 ![Accounting Services](/images/austin-distel-nGc5RT2HmF0-unsplash.jpg)
 
-# Objectives
+# Перший крок
+> ### Введіть кількість повідомлень яку потрібно відправити
 
-Financial accounting and financial reporting are often used as synonyms.
+Вам необхідно ввести кількість повідомлень, яку потрібно надіслати. Тобто, якщо ви маєте базу даних на 5000 номерів і вам необхідно їх проінформувати - введіть кількість номерів в це поле.
 
-1. According to International Financial Reporting Standards: the objective of financial reporting is:
-2. To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.
-3. According to the European Accounting Association:
+> ### Пункт: Надамо свою (база замовника)
 
-## Relevance
+Якщо обрати цей пунк це означатиме що ви надаєте нам свою базу телефоних номерів для подальшого опрацювання роботом.
 
-Relevance is the capacity of the financial information to influence the decision of its users. The ingredients of relevance are the predictive value and confirmatory value. Materiality is a sub-quality of relevance.
+> ### Пункт: База виконавця (машинне формування з відкритого джерела)
 
-> The ingredients of relevance are the predictive value and confirmatory value.
+Цей пункт означає що ми самі формуємо базу даних ваших потенційних клієнтів за вашими категоріями. База формується з відкритих джерел, або береться з наших внутрішніх баз даних.
 
-Information is considered material if its omission or misstatement could influence the economic decisions of users taken on the basis of the financial statements.
+# Другий крок
 
-## Faithful Representation
+> ### Оплата за надіслані.
 
-Faithful representation means that the actual effects of the transactions shall be properly accounted for and reported in the financial statements. The words and numbers must match what really happened in the transaction. The ingredients of faithful representation are completeness, neutrality and free from error.
+Повідомлення вважається надісланим не залежно від того чи його прослухали чи ні. Після трьох спроб додзвону, таке повідомлення є виконаним, навіть якщо слухавка не була піднята.
 
-## Enhancing Qualitative Characteristics
+> ### Оплата за доставлені.
 
-### Verifiability
+Повідомлення вважається доставленим якщо слухавка була піднята.
 
-Verifiability implies consensus between the different knowledgeable and independent users of financial information. Such information must be supported by sufficient evidence to follow the principle of objectivity.
+**Важливо**, даний пункт можна обрати лише в тому випадку, якщо базу даних телефоних номерів формує наша компанія. Адже ми можемо забезпечити якісну та актуальну базу даних. Ми не несемо відповідальності за якість вашої бази даних, тому цей пункт **активний лише в тому випадку, якщо ми формуємо для вас базу даних**. 
 
-### Comparability
+# Третій крок
 
-Comparability is the uniform application of accounting methods across entities in the same industry. The principle of consistency is under comparability. Consistency is the uniform application of accounting across points in time within an entity.
+> ### Не опрацьовувати відгук
 
-### Understandability
+> ### Опрацьовувати 
 
-Understandability means that accounting reports should be expressed as clearly as possible and should be understood by those to whom the information is relevant.
-Timeliness: Timeliness implies that financial information must be presented to the users before a decision is to be made.
+При натисканні пропонованої цифри контрагентом на телефоні під час прослуховування повідомлення можливі такі дії:
+1. Відправити SMS повідомлення (до 70 символів).
+2. З'єднати із менеджером телефонним дзвінком (якщо абонент обрав даний пунк при дзвінку, його буде автоматично зʼєднано з менеджером, тобто з вами)
+3. Введіть кількість рівнів IVR
 
----
+Одним рівнем важається одне натискання цифри.
+Наприклад , якщо після привітання в повідомленні контрагенту пропонується натиснути цифру(для здійснення вибору чи виявлення зацікавленості, тощо..), то це один рівень. А якщо після цього є ще одна пропозиція натиснути - то це другий рівень.
 
-## Statement of cash flows
+# Четвертий крок
 
-The statement of cash flows considers the inputs and outputs in concrete cash within a stated period. The general template of a cash flow statement is as follows: Cash Inflow - Cash Outflow + Opening Balance = Closing Balance
+Дані пункти активні лише тоді коли на **другому кроці активний пункт Оплата за доставлені**.
 
-| Cash Inflow | Outflow   | Opening Balance |
-| ----------- | --------- | --------------- |
-| _Monday_    | `Tuesday` | **Wednesday**   |
-| 1           | 2         | 3               |
+> ### Введіть кількість спроб додзвону до контрагента
 
-**Example 1:** in the beginning of September, Ellen started out with $5 in her bank account. During that same month, Ellen borrowed $20 from Tom. At the end of the month, Ellen bought a pair of shoes for $7. Ellen's cash flow statement for the month of September looks like this:
+Якщо абонент, до якого телефонує наш автоінформатор не підійняв слухавку, за деякий час робот буде знову передзвонювати контрагенту.
 
-- Cash inflow: $20
-- Cash outflow:$7
-- Opening balance: $5
-- Closing balance: $20 – $7 + $5 = $18
+> ### Введіть мінімальний час прослуховування повідомлення
 
-**Example 2:** in the beginning of June, WikiTables, a company that buys and resells tables, sold 2 tables. They'd originally bought the tables for $25 each, and sold them at a price of $50 per table. The first table was paid out in cash however the second one was bought in credit terms. WikiTables' cash flow statement for the month of June looks like this:
+Якщо ви виставите тут 5 секунд, то це буде вважатись доставленим повідомленням, оскільки абонент прослухав автоінформатор 5 секунд. Всі розмови, які були меншими за 5 секунт не будуть враховуватись. 
 
-> **Important:** the cash flow statement only considers the exchange of actual cash, and ignores what the person in question owes or is owed.
+# Пʼятий крок
 
-## Statement of financial position (balance sheet)
+> ### Текст повідомлення
 
-The balance sheet is the financial statement showing a firm's assets, liabilities and equity (capital) at a set point in time, usually the end of the fiscal year reported on the accompanying income statement.
+Напишіть текст вашого повідомлення з врахуванням багаторівневого меню (або звичайного повідомлення). Текст прораховується поблоково, 100 символів - один блок. Вартість одного блоку 0.30коп. до вартості однієї анкети.
 
-- **fixed assets**
-  - property
-  - building
-  - equipment (such as factory machinery)
-- **intangible assets**
-  - copyrights
-  - trademarks
-  - patents
-    - pending
-    - international
-- goodwill
+# Шостий крок
 
-Owner's equity, sometimes referred to as net assets, is represented differently depending on the type of business ownership. Business ownership can be in the form of a sole proprietorship, partnership, or a corporation. For a corporation, the owner's equity portion usually shows common stock, and retained earnings (earnings kept in the company). Retained earnings come from the retained earnings statement, prepared prior to the balance sheet.
+> ### Надасьте свій (файл замовника)
+
+Мається на увазі, що ви маєте власний озвучений файл з текстом вашої пропозиції. В такому випадку, цей файл має відповідати таким вимогам:
+
+ - Формат: .wav
+ - Біттрейд: 16bit
+ - Частота: 8000 hz
+ - Канальність: mono 
+
+ > ### Згенерувати роботом (файл виконавця).
+
+ Ми власноруч генеруємо повідомлення з вашого тексту, який ви вказали на 5 кроці.
+
+ > ### Озвучити в студії (файл виконавця).
+
+ Ми можемо озвучити ваш текст в студії диктором. 
+
+# Сьомий крок
+
+> ### Вихідна лінія
+
+Чим більше каналів в SIP - лінії тим швидше наш автоінформатор опрацює базу даних.
+
+Якщо обрати GSM - лінію, ви маєте змогу **отримати фізичну сім картку** з якої опрацьовувалась база даних, але цей протокол значно довше обробляє базу даних.
+
+
+# Восьмий крок
+
+> ### Як найшвидше
+
+Автоінформатор буде запущений з 9 ранку до 5 вечора.
+
+> ### За розкладом
+
+Ви самі будете визначати години роботи автоінформатора за календарем.
+
+# Девʼятий крок
+
+> ### Звітувати CRM
+
+Звіт виконаної роботи передається у нашу CRM систему після чого вам надаються данні для входу в особистий кабінет. 
+
+> ### Вивантажити Excel
+
+Звіт виконаної роботи вивантажується в Excel та форматуэться в зручний для читання формат. 
+
+# Десятий крок
+
+Ввівши свої контакти та натиснувши кнопку **Замовити** ми отримаємо ваш прорахунок та заявку на виконання робіт після чого наш менеджер зателефонує до вас як найшвидше.
