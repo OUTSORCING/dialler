@@ -10,6 +10,37 @@ $white: #ffffff;
 $white-offset: #fff6f8;
 $steel: #5c5a5a;
 
+//toc
+div#toc {
+  padding-left: 35px; /* Зменшено відступи */
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border: 1px solid #cb1010;
+  font-size: 16px; /* Розмір шрифту */
+  width: 350px; /* Ширина блоку */
+  border-radius: 5px; /* Закруглені кути */
+  margin-bottom: 20px; /* Відступи від інших елементів */
+  text-align: left; /* Вирівнювання тексту (можна вибрати 'center' або 'right' за потреби) */
+}
+
+/* Стилі для посилань у таблиці змісту */
+div#toc a {
+  text-decoration: none; /* Видалення підкреслення для посилань */
+  color: #cb1010; /* Колір посилань */
+  display: block; /* Робить посилання блоками для кращого вигляду */
+  margin-bottom: 8px; /* Відступ між посиланнями */
+}
+
+div#toc li:last-child a {
+  margin-bottom: 0; /* Забираємо відступ у останньому посиланні */
+}
+
+div#toc a:hover {
+  text-decoration: underline; /* Підкреслення посилань при наведенні */
+  color: #ff0000; /* Колір посилань при наведенні */
+}
+
+
 // Links
 $link-color: $primary;
 $link-decoration: none;
