@@ -24,7 +24,7 @@
 
     function createLink (header) {
       var innerText = (header.textContent === undefined) ? header.innerText : header.textContent;
-      return "<a class='"+settings.classes.link+"' href='#" + fixedEncodeURIComponent(header.id) + "'>" + innerText + "</a>";
+      return "<a class='"+settings.classes.link+"'  href='#" + fixedEncodeURIComponent(header.id) + "'>" + innerText + "</a>";
     }
 
     var headers = $(settings.headers).filter(function() {
@@ -57,7 +57,7 @@
 
     var level = get_level(headers[0]),
       this_level,
-      html = settings.title + " <" +settings.listType + " class=\"" + settings.classes.list +"\">";
+      html = settings.title + " <" +settings.listType + " class=\""  + settings.classes.list +"\">";
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
