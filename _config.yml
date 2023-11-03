@@ -49,5 +49,3 @@ exclude:
   - LICENSE.md
   - LICENSE
   - README.md
-
-markdown: kramdown
