@@ -1,4 +1,4 @@
-baseurl: ''
+baseurl: '/'
 permalink: pretty
 title: 'Аутсорсинговий відділ продажу'
 
@@ -50,4 +50,3 @@ exclude:
   - LICENSE
   - README.md
 
-markdown: kramdown
