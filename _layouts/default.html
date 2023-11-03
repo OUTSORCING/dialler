@@ -13,6 +13,7 @@
   <!-- Self host font -->
   <!-- <link rel="preload" href="{{ '/assets/fonts/playfair-display.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin> -->
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   
   
   {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
@@ -36,7 +37,6 @@
   {% include footer.html %}
   {% include sub-footer.html %}
   <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   {% include google-analytics.html %}
 </body>
 </html>

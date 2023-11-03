@@ -38,6 +38,7 @@ sass:
 plugins:
   - jekyll-environment-variables
 
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -49,4 +50,3 @@ exclude:
   - LICENSE.md
   - LICENSE
   - README.md
-
