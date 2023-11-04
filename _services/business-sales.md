@@ -3,7 +3,7 @@ title: "Як прорахувати вартість?"
 date: 2019-01-28T15:15:26+10:00
 weight: 2
 description: "Використовуйте калькулятор прорахунку вартості та надсилайте заявку!"
-image: "/dialler/images/austin-distel-nGc5RT2HmF0-unsplash.jpg"
+image: "austin-distel-nGc5RT2HmF0-unsplash.jpg"
 ---
 
 Для того аби прорахувати вартість наших послуг скористайтесть нашим [калькулятором](https://z.osd24.com/calc_dialler/calc_dialer.php). Нижче буде опис кожного рівня калькулятору для кращого розуміння за що саме ви будете платити свої кошти.
