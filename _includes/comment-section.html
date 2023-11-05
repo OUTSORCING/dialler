@@ -196,7 +196,7 @@
 		{%- endif -%}
 	};
 
-	var thisPageUrl = "{{ page.url }}";
+	var thisPageUrl = "{{ site.url }}{{ page.url }}";
 	const EXTRA_INFO_START = "chunkedCommentInfoStart";
 	const EXTRA_INFO_END = "chunkedCommentInfoEnd";
 
@@ -220,7 +220,7 @@
 		var date = new Date(stringDate);
 		var dateOptions = { year: 'numeric', month: 'long', day: 'numeric'};
 		var timeOptions = { hour: 'numeric', minute: 'numeric' };
-		return `${date.toLocaleDateString("en-us", dateOptions)} at ${date.toLocaleTimeString("en-us", timeOptions)}`;
+		return `${date.toLocaleDateString("uk-ua", dateOptions)} at ${date.toLocaleTimeString("uk-ua", timeOptions)}`;
 	};
 
 	{%- comment -%}
@@ -311,7 +311,7 @@
 			netNewComments = []
 		}
 
-		setText("num-comments-displayed", `Showing ${visibleComments.length} of ${visibleComments.length + hiddenComments.length} comments`);
+		setText("num-comments-displayed", `Завантажено ${visibleComments.length} з ${visibleComments.length + hiddenComments.length} коментарів`);
 
 		if (hiddenComments.length == 0) {
 			hide("load-more-comments");
@@ -369,7 +369,7 @@
 	};
 
 	function replyToComment(commentId) {
-		document.getElementById("comment-reply-info").innerHTML = `<small class="comment-reply-clear" onclick="clearCommentReplyItem()">Ⓧ&nbsp;&nbsp;&nbsp;</small><small onClick="jumpToComment('${commentId}')">Replying to comment <a id="reply-to-comment-id">${commentId}</a></small>`;
+		document.getElementById("comment-reply-info").innerHTML = `<small class="comment-reply-clear" onclick="clearCommentReplyItem()">Ⓧ&nbsp;&nbsp;&nbsp;</small><small onClick="jumpToComment('${commentId}')">Відповідь на коментар <a id="reply-to-comment-id">${commentId}</a></small>`;
 		smoothScrollTo(document.getElementsByClassName("comments-form")[0]);
 	};
 	{%- endif -%}
@@ -397,7 +397,7 @@
 		{%- endcomment -%}
 		var verifiedAuthorTag = "";
 		if (jsonElement.isAuthor == true || jsonElement.isAuthor === "TRUE") {
-			verifiedAuthorTag = "&nbsp;<strong>(Author)</strong>";
+			verifiedAuthorTag = "&nbsp;<strong>(Менеджер)</strong>";
 		}
 		{%- comment -%}
 		/* Create the new item using HTML and append it to the user-visible comment section */
@@ -413,7 +413,7 @@
 		if (replyId != null && replyId != "" && commentIds.has(replyId)) {
 			replyToHtml = `<p class="comemnt-reply-id" onclick="jumpToComment('${replyId}')"><<< ${replyId}</p>`;
 		}
-		var currentCommentReplyButton = `<span class="comment-reply-button" onclick="replyToComment(${commentReplyId})"><img></img>Reply</span>`;
+		var currentCommentReplyButton = `<span class="comment-reply-button" onclick="replyToComment(${commentReplyId})"><img></img>Відповісти</span>`;
 		{%- endif -%}
 
 		newItem.innerHTML = `
@@ -620,23 +620,22 @@
 	HTML for displaying the actual comment section.
 	It has a state for oth when the article has comments and when it does not. -->
 {%- endcomment -%}
-<h4 class="post-subtitle">Comments</h4>
+<h4 class="post-subtitle">Коментарі та запитання</h4>
 <div id="load-comments" class="comments">
-	<button id="load-comment-button" class="comment-button" onclick="initialCommentLoad()">Load Comments</button>
+	<button id="load-comment-button" class="comment-button" onclick="initialCommentLoad()">Завантажити коментарі</button>
 </div>
 <div id="comments-and-input">
 	<div id="comment-section" class="comments">
 		<p id="num-comments-displayed"></p>
 		<button id="load-more-comments" class="comment-button" onclick="loadMoreComments(true)" type="button">Load Older Comments</button>
 		<div id="no-comments" class="comment-info-text">
-			<p>There are currently no comments on this article, be the first to add one below</p>
+			<p>Тут поки що немає коментарів 😞 Будьте першими хто їх додасть!</p>
 		</div>
 		<div id="comment-container"></div>
 	</div>
-	<h4 class="post-subtitle">Add a Comment</h4>
+	<h4 class="post-subtitle">Написати коментар</h4>
 	<div class="comments">
 		<div class="comment-info-text">
-			<p>Note that I may remove comments for any reason, so try to be civil. If you are looking for a response to your comment, either leave your email address or check back on this page periodically.</p>
 			{%- if site.google_forms_comments.google_app_script -%}
 			<p id="comment-submit-error"></p>
 			{%- endif -%}
@@ -649,13 +648,13 @@
 			{%- endif -%}
 				<ul>
 					<li>
-						<input id="comment-name" name="username" type="text" placeholder="Name" required="" value="">
+						<input id="comment-name" name="username" type="text" placeholder="Імʼя" required="" value="">
 						{%- if comment_replies_enabled -%}
 						<p id="comment-reply-info"></p>
 						{%- endif -%}
 					</li>
-					<li><textarea id="comment-comment" name="comment" placeholder="Comment" required=""></textarea></li>
-					<li><button id="comment-submit" type="submit" class="comment-button">Post</button></li>
+					<li><textarea id="comment-comment" name="comment" placeholder="Коментар" required=""></textarea></li>
+					<li><button id="comment-submit" type="submit" class="comment-button">Надіслати</button></li>
 				</ul>
 				{%- if recaptcha_enabled -%}
 				<p id="comment-recaptcha-disclaimer">This site is protected by reCAPTCHA and the Google
@@ -794,7 +793,7 @@
 .comment-button {
 	border: 0;
 	border-radius: 8px;
-	background: #9ccc65;
+	background: #bb1c16;
 	color: #fff;
 	font-family: "Source Sans Pro", sans-serif;
 	font-weight: bold;
