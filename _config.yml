@@ -1,4 +1,4 @@
-baseurl: '/dialler'
+baseurl: '/dialler/'
 permalink: pretty
 title: 'Аутсорсинговий відділ продажу'
 
@@ -50,3 +50,7 @@ exclude:
   - LICENSE.md
   - LICENSE
   - README.md
+
+comment-post: https://docs.google.com/forms/d/e/1FAIpQLSdLkkfWbYAVYhzUiEluKIaj1wHw2R49E5V_OYvOFK80nox8aA
+comment-read: https://docs.google.com/spreadsheets/d/1YcPkKbKIaE6wGhbvkt9-7Ip8u4hGJcfe2Ua8wR42pc4
+comment-post-fields: [ entry.1510782535, entry.847432390, entry.471640909]
