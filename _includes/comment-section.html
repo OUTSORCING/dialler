@@ -411,7 +411,7 @@
 		var replyToHtml = null;
 		var replyId = comment?.extraCommentInfo?.replyToCommentId;
 		if (replyId != null && replyId != "" && commentIds.has(replyId)) {
-			replyToHtml = `<p class="comemnt-reply-id" onclick="jumpToComment('${replyId}')"><<< ${replyId}</p>`;
+			replyToHtml = `<p class="comemnt-reply-id" onclick="jumpToComment('${replyId}')">< Відповідь користувачу</p>`;
 		}
 		var currentCommentReplyButton = `<span class="comment-reply-button" onclick="replyToComment(${commentReplyId})"><img></img>Відповісти</span>`;
 		{%- endif -%}
@@ -512,7 +512,47 @@
         });
         return false;
     };
-	{%- endif -%}
+	{%- endif -%} 
+
+    // Get a reference to the input
+var input = document.getElementById("comment-name");
+
+// Check if a saved value exists in cookies
+var savedValue = getCookie("username");
+
+// If a saved value exists, set it as the input value
+if (savedValue) {
+    input.value = savedValue;
+}
+
+// Listen for input value changes
+input.addEventListener("input", function() {
+    // Save the entered value in cookies
+    setCookie("username", input.value, 30);
+});
+
+// Function to save a value in cookies
+function setCookie(name, value, daysToExpire) {
+    var date = new Date();
+    date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Function to retrieve a value from cookies
+function getCookie(name) {
+    var savedData = document.cookie.split(';');
+    for (var i = 0; i < savedData.length; i++) {
+        var cookie = savedData[i];
+        while (cookie.charAt(0) == ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name + "=") == 0) {
+            return cookie.substring(name.length + 1, cookie.length);
+        }
+    }
+    return "";
+}
 
 
 	function getCommentContent() {
@@ -627,7 +667,7 @@
 <div id="comments-and-input">
 	<div id="comment-section" class="comments">
 		<p id="num-comments-displayed"></p>
-		<button id="load-more-comments" class="comment-button" onclick="loadMoreComments(true)" type="button">Load Older Comments</button>
+		<button id="load-more-comments" class="comment-button" onclick="loadMoreComments(true)" type="button">Завантажити старіші коментарі</button>
 		<div id="no-comments" class="comment-info-text">
 			<p>Тут поки що немає коментарів 😞 Будьте першими хто їх додасть!</p>
 		</div>
@@ -793,7 +833,7 @@
 .comment-button {
 	border: 0;
 	border-radius: 8px;
-	background: #bb1c16;
+	background: #e5261f;
 	color: #fff;
 	font-family: "Source Sans Pro", sans-serif;
 	font-weight: bold;
@@ -940,7 +980,7 @@ https://developers.google.com/recaptcha/docs/faq#id-like-to-hide-the-recaptcha-b
 
 .comment-info-text p {
 	margin: 0 0 1rem;
-	text-align: justify;
+	text-align: center;
     text-align-last: center;
     font-size: .9em;
 }
