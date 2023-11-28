@@ -10,12 +10,12 @@ main:
   #   url: "/team/"
   #   weight: 3
 
-  - name: "Про нас"
-    url: "/about/"
+  - name: "Розрахувати вартість"
+    url: "/cost/"
     weight: 4
-  - name: "Контакти"
-    url: "/contact/"
-    weight: 5
+  # - name: "Контакти"
+  #   url: "/contact/"
+  #   weight: 5
 
 footer:
   - name: "Головна"
