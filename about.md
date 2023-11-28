@@ -6,11 +6,9 @@ bodyClass: page-about
 permalink: /cost/
 ---
 
-<div style="width: 100%; height: 824px; border: 0;">
+<div style="width: 100%; height: 524px; border: 0;">
     <iframe src="https://z.osd24.com/calc_dialler/calc_dialer.php" frameborder="0" style="width: 100%; height: 100%; max-width: 1024px; max-height: 1024px;"></iframe>
 </div>
-
-
 
 
 <!-- <style>
@@ -22,4 +20,5 @@ permalink: /cost/
     margin: 0 auto;
     display: block;
 }
-    </style> -->
+</style> -->
+    
