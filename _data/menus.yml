@@ -11,7 +11,7 @@ main:
   #   weight: 3
 
   - name: "Розрахувати вартість"
-    url: "/cost.html/"
+    url: "/cost.html"
     weight: 4
   # - name: "Контакти"
   #   url: "/contact/"
