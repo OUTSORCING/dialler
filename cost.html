@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <title>Розрахунок вартості</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-0mvl6+xCPlnyq8fePibOyPmeKeONpD5ym2a7cf7LW8TV5q6Uq6X1OErV8l5K6MdwFF2CjJw+U9bNXBNJNTUO4A=="
+    crossorigin="anonymous" />
+
+  <link rel="icon" type="image/png" href="/dialler/images/favicon-32x32.svg">
+  <!-- Google Fonts CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="/dialler/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="/dialler/assets/css/style.css" rel="stylesheet">
+  <script src="/dialler/assets/js/toc.js"></script>
+  <script src="/dialler/assets/js/calc_dialler.js"></script>
+  <script src="/dialler/assets/js/jquery.js"></script>
+  <script src="/dialler/assets/js/tel_mask_form.js"></script>
+
+
+
+  <meta name="description" content="Розрахунок вартості голосових повідомлень" />
+  <meta property="og:title" content="Розрахунок вартості" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+
+  <meta property="og:description" content="Розрахунок вартості голосових повідомлень" />
+  <meta name="twitter:card" content="summary" />
+
+
+
+  <meta content="Аутсорсинговий відділ продажу" property="og:site_name">
+
+  <meta content="Розрахунок вартості" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="Розрахунок вартості голосових повідомлень" property="og:description">
+
+
+  <meta content="http://localhost:4000/cost.html/" property="og:url">
+
+  <!--  -->
+
+  <meta content="https://outsorcing.github.io/dialler/images/" property="og:image">
+
+
+
+</head>
+
+<body class='page page-basic'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+
+    <ul>
+
+      <li class="">
+        <a href="https://outsorcing.github.io/dialler/">Головна</a>
+      </li>
+
+      <li class="">
+        <a href="https://outsorcing.github.io/dialler/services/">Можливості</a>
+      </li>
+
+      <li class="active">
+        <a href="/dialler/cost/">Розрахувати вартість</a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+      <div class="container">
+        <div class="logo">
+          <a href="/dialler/"><img width="120px" height="32px" alt="Аутсорсинговий відділ продажу"
+              src="/dialler/images/logo/logo.svg" /></a>
+        </div>
+        <div class="logo-mobile">
+          <a href="/dialler/"><img width="32px" height="32px" alt="Аутсорсинговий відділ продажу"
+              src="/dialler/images/logo/logo-mobile.svg" /></a>
+        </div>
+        <div id="main-menu" class="main-menu">
+
+          <ul>
+
+            <li class="">
+              <a href="https://outsorcing.github.io/dialler/">Головна</a>
+            </li>
+
+            <li class="">
+              <a href="https://outsorcing.github.io/dialler/services/">Можливості</a>
+            </li>
+
+            <li class="active">
+              <a href="https://outsorcing.github.io/dialler/cost.html">Розрахувати вартість</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main -->
+
+
+    <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+      <div class="row justify-content-start">
+        <div class="col-12 col-md-12">
+          <div class="service service-single">
+            <h1 class="title">Розрахунок вартості</h1>
+            <body class="text-dark text-16">
+
+              <div class="container text-center">
+              
+              <!-- Заголовок -->
+              <div class="row justify-content-center">
+                <div class="col-md-12">
+                  <h4>Виберіть кейс, який задовільнить ваші потреби або скористайтесь калькулятором для індивідуального розрахунку </h4>
+                </div>
+              </div>
+              <!-- Прайс -->
+              <div class="row justify-content-center" id="start_button" style="display:block;">
+                <main>
+                  <div class="row row-cols-1 row-cols-md-4 mb-3 text-center">
+                    <div class="col">
+                      <div class="card mb-3 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                          <h4 class="my-0 fw-normal">Мінімум</h4>
+                        </div>
+                        <div class="card-body">
+                          <h1 class="card-title pricing-card-title">4500<small class="text-body-secondary fw-light"> грн</small></h1>
+                          <ul class="list-unstyled mt-3 mb-3">
+                            <li><hr>Базу надає замовник (до 5000).</li>
+                            <li>Оплата за надіслані.</li>
+                            <li>3 спроби додзвону.</li>
+                            <li>Повідомлення до 150 сим./20 сек.<hr></li>
+                          </ul>
+                          <button id="PackStart" type="button" class="w-100 btn btn-lg btn-outline-danger cupAction-getPack">Вибрати</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card mb-3 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                          <h4 class="my-0 fw-normal">Стандарт</h4> 
+                        </div>
+                        <div class="card-body">
+                          <h1 class="card-title pricing-card-title">7420<small class="text-body-secondary fw-light"> грн</small></h1>
+                          <ul class="list-unstyled mt-3 mb-3">
+                            <li><hr>Базу формує виконавець.</li>
+                            <li>Оплата за 1000 доставлених.</li>
+                            <li>Опрацювання рекакції та SMS.</li>
+                            <li>Повідомлення до 200 сим./20 сек.</li>
+                            <li>Вивантаження звіту в Excel<hr></li>
+                          </ul>
+                          <button id="PackStandart" type="button" class="w-100 btn btn-lg btn-outline-danger cupAction-getPack">Вибрати</button>
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="col">
+                      <div class="card mb-3 rounded-3 shadow-sm ">
+                        <div class="card-header py-3">
+                          <h4 class="my-0 fw-normal">Потужний</h4>
+                        </div>
+                        <div class="card-body">
+                          <h1 class="card-title pricing-card-title">16600<small class="text-body-secondary fw-light"> грн</small></h1>
+                          <ul class="list-unstyled mt-3 mb-3">
+                            <li><hr>Пакет стандарт плюс:</li>
+                            <li>Оплата за 2000 доставлених.</li>
+                            <li>З'єднювати із менеджером телефонним дзвінком.</li>
+                            <li>Гарантований час прослуховування 5 сек.<hr></li>
+                          </ul>
+                          <button id="PackPower" type="button" class="w-100 btn btn-lg btn-outline-danger cupAction-getPack">Вибрати</button>
+                        </div>
+                      </div>
+                    </div>	
+                    <div class="col">
+                      <div class="card mb-3 rounded-3 shadow-sm border-danger">
+                        <div class="card-header py-3 text-bg-danger border-danger">
+                          <h4 class="my-0 fw-normal">Професіонал</h4>
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title pricing-card-title">Індивідульний<br>прорахунок</h4>
+                          <ul class="list-unstyled mt-3 mb-3">
+                          <li><hr>Скористуйтесь кальтулятором, в якому ви зможете більш детально вибрати функціонал та розрахувати індивідуальну ціну під свої унікальні потреби.<hr></li> 
+                          
+                          </ul>
+                          <button type="button" class="w-100 btn btn-lg btn-danger cupAction-start-button">Розрахувати </button> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main> 
+                <!--   
+                <div class="col-md-4">
+                  <p> <button class="btn btn-secondary cupAction-start-button" >Розпочати </button> </p>
+                </div>
+                -->
+              </div>
+              
+              <!-- Кнопки навігації -->
+              <h3 class="cupAction-navi-title" style="display:none;" >Калькулятор <hr></h3>
+              <div class="row justify-content-center" >
+                <div class="col-md-8">			
+                  <!-- Кнопки навігації -->
+                  <div class="row justify-content-center"  id="nav_panel">				
+                    <div class="col-md-4">			
+                      <p id="step_back" style="display:none;"> 
+                        <button id="btn_back"  class="btn btn-secondary cupAction-navi">&lt; Назад </button> 
+                      </p>
+                    </div>
+                    <div class="col-md-4">
+                      <p id="step_next" style="display:none;"> 
+                        <button id="btn_next" class="btn btn-secondary cupAction-navi"> Далі&nbsp;&nbsp;&gt;</button> 
+                      </p>					
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            
+              
+              <!-- Прогресбар + Кошик -->
+              <div class="row justify-content-center" >
+                <div class="col-md-9">
+                  <p class="text-start text-danger fs-5 text-success cupAction-calc-start-block" id="step_name" style="display:none;">Вибір кількості та типу бази контрагентів</p>
+                  <div class="progress cupAction-calc-start-block " style="display:none;">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-label="Example with label" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="step_progres"></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="basket fs-6  cupAction-calc-start-block text-start" style="display:none;">
+                    <p> 
+                      Ціна: <b><span id="basket_priceOneMsg" class="font-weight-bold cupAction-priceOneMsg">4500</span></b> грн./шт.<br>
+                      К-сть: <b><span id="basket_countMsg" class="font-weight-bold cupAction-countMsg">1</span></b> шт.<br>
+                      Загалом: <b><span id="basket_allPrice" class="font-weight-bold cupAction-allPrice">4500</span></b> грн. 
+                      <img  class="cupAction-calcModal" data-bs-toggle="modal" data-bs-target="#calcModal" buttonCalcModal="basket-list" style="cursor:pointer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADBElEQVQ4T52TXUyTdxTGf/+332/pB0UGbExH1oJQlmJcFM2ci2aaGIKaOM2SeeGFMU2WmbRgcO4jbstGRIyLS9wWvTCbWxYv3KLbRC8MTh1RAn4REJGK8uEHlgptZa1vX9+WdBK90nP3/5+c55zzPM8RPBX19fXLVEVdniK1UCDK02kVtVtCOit0oqWpqen49BKRfTQ0NLyWTCY/dLlm+F8pnikXFBaR63Rl0mORMHdujzA0eDMeDo/uNRgM3zU2Nt5I5zIA6eJEIvGlx1P+gbusktB9B+e0nv23H2ntH1HgSFDlFniL/+NWqJtr17p/NhqNn6ZBMgDBYHCn2z076PHO58g5Ex3XYXGVlXkVOeiESv/gOL+fvEFhrkLtAgvh4Sv09fU0a1En0js7na7D1Qvfkf/qdHK6SyHPJnHgczcum4qkM2QG/ad9GP/XbfheN/P+UhuXOs7EI5HwalEXqGuu9M0JCLuPH/9WUJUEFqOgYpbE1dBdil5ysGfLHEwGwQr/n/QPj7Oh5mVm2u9x5WLnLhEIBP59d3lN9ZH2HC5c1/hOJVE0kGjsIaORhxQ5VQ7veJNJRaL2oxYm4inmex34VxdwouVomwgGgpH31q13bNs/ysSknpSSJBqNMzYew2pO8cn6Qt6qymfHwRB/tA5hs+ixW/V8v3Uuh3776cH/AFt/uMVYTE9EKxyfiBGLJ/jG72HVIhfNB3s51jaGLJuQNNptso6dm71TANkVDrVOcuJ8hGh8MjOFUQ9fbKrAaRVs39eLPceq/Rk0U0mUvmpg7RLL1ApZEqNqIR/v7dX4VhFCQTbpWOB1YrGY6L2pIptlTQ29xpGg9m0jeebBKRKzMs6rXiR/++tVWi9MaNqDb3YuX/krMZpkmg8MMTAsoZmH0uIUa5bq6Gg/NSXjdCOVeCrZ88tlzvfEKCvJ57ONb5CfZ2fb7hAj98z4SgUrlxgYGeh8YqRnrFxaTs9AjPauB9y5n0QvmcnPdVFVnkPZrCShvq5nrZwFeeFjmn6ez3vOjwEwl2gC/WKRPwAAAABJRU5ErkJggg=="/>
+                    </p>
+                  </div>
+                </div>
+              </div>	
+              
+              <!-- Основне тіло калькулятора -->
+              <div class="row justify-content-center"  id="calc_body">
+                <div class="col-md-12">
+                  <p class="base-calc-body cupAction-calc-start-block" style="display:none;">
+                    <input type="hidden" value="1" id="currentStepNum"/>
+                    
+                    <!-- Вибір бази контрагентів -->
+                    <div id="step1" mytitle="Вибір кількості та типу бази контрагентів" style="display:none;" class="cupAction-calc-step-block text-start">	
+                    
+                      <div class="form-group" >
+                        
+                        <input class="form-control cupAction-calculate" type="number"  id="step5_countMSG" name="countMSG" value="1" min="1" style="width:50%">
+                        <label for="step5_countMSG">Введіть кількість повідомлень яку потрібно відправити:</label>
+                      </div>
+                      <p> </p>
+                    
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step1_DB_v1" name="database" value="1" checked="checked">
+                        <label class="form-check-label" for="step1_DB_v1">Надамо свою (база замовника)</label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step1_DB_v2" name="database" value="2">
+                        <label class="form-check-label" for="step1_DB_v2">База виконавця (машинне формування з відкритого джерела)</label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step1_DB_v3" name="database" value="3">
+                        <label class="form-check-label" for="step1_DB_v3">База виконавця (формування за допомогою телефонного дзвінка та актуалізацією даних)</label>
+                      </div>
+                      
+                      <!-- Калькулятор для формування бази -->
+                      <div id="blockDBcalc" style="display:none;position:relative;left:40px;">
+                        <div><b>Поля для побудови:</b></div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input cupAction-calculate" type="checkbox" role="switch" id="blockDBcalc_company" name="clientname" value="1" checked="checked" disabled="disabled">
+                          <label class="form-check-label" for="blockDBcalc_company">Назва компанії</label>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input cupAction-calculate" type="checkbox" role="switch" id="blockDBcalc_phone" name="phone" value="1" checked="checked" disabled="disabled">
+                          <label class="form-check-label" for="blockDBcalc_phone">Телефон</label>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input cupAction-calculate" type="checkbox" role="switch" id="blockDBcalc_email" name="email" value="1" >
+                          <label class="form-check-label" for="blockDBcalc_email">email</label>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input cupAction-calculate" type="checkbox" role="switch" id="blockDBcalc_lide" name="lide" value="1">
+                          <label class="form-check-label" for="blockDBcalc_lide">З'ясування потреби</label>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input cupAction-calculate" type="checkbox" role="switch" id="blockDBcalc_person" name="person" value="1" >
+                          <label class="form-check-label" for="blockDBcalc_person"> Компетентна особа</label>
+                        </div>
+                      </div>
+                      
+                      
+                      
+                    </div>
+                    
+                    <!-- Оплата за відправлені чи доставлені -->
+                    <div id="step2" mytitle="Вибір об'єкту оплати" style="display:none;" class="cupAction-calc-step-block text-start">					
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step2_paymentFor_v1" name="paymentFor" value="sent" checked="checked">
+                        <label class="form-check-label" for="step2_paymentFor_v1">Оплата за надіслані.<br>Повідомлення вважається надісланим не залежно від того чи його прослухали чи ні. Після трьох спроб додзвону, таке повідомлення є виконаним, навіть якщо слухавка не була піднята. </label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step2_paymentFor_v2" name="paymentFor" value="delivered">
+                        <label class="form-check-label" for="step2_paymentFor_v2">Оплата за доставлені.<br>Повідомлення вважається доставленим якщо слухавка була піднята.</label>
+                      </div>		
+                    </div>
+                    
+                    <!-- IVR( опрацьовувати відгук чи ні) - кількість рівнів -->
+                    <div id="step3" mytitle="Як опрацьовувати відгук" style="display:none;" class="cupAction-calc-step-block text-start">					
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step3_ivr_v1" name="IVR" value="1" checked="checked">
+                        <label class="form-check-label" for="step3_ivr_v1">Не опрацьовувати.</label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step3_ivr_v2" name="IVR" value="2">
+                        <label class="form-check-label" for="step3_ivr_v2">Опрацьовувати.</label>
+                      </div>
+                      
+                      <!-- Лічильник рівнів ІВР -->
+                      <div id="blockIVR" style="display:none;position:relative;left:40px;">
+                        <div>При  натисканні  пропонованої цифри контрагентом на телефоні під час прослуховування повідомлення можливі такі дії:</div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input cupAction-calculate" type="checkbox" role="switch" id="blockIVR_actionFix" name="actionFix" value="1" checked="checked" disabled="disabled">
+                          <label class="form-check-label" for="blockIVR_actionFix">Зафіксувати у звіті.</label>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input cupAction-calculate" type="checkbox" role="switch" id="blockIVR_sentSMS" name="sentSMS" value="1">
+                          <label class="form-check-label" for="blockIVR_sentSMS">Відправити SMS повідомлення (до 70 символів).</label>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input cupAction-calculate" type="checkbox" role="switch" id="blockIVR_andDiall" name="andDiall" value="1" >
+                          <label class="form-check-label" for="blockIVR_andDiall">З'єднати із менеджером телефонним дзвінком</label>
+                        </div>
+                        <div class="form-group" style="position:relative;left:40px;">
+                          <label for="blockIVR_count"><b>Введіть кількість рівнів IVR:</b> <br><em> Одним рівнем важається одне натискання цифри.<br> Наприклад , якщо після привітання в повідомленні контрагенту пропонується натиснути цифру(для здійснення вибору чи виявлення зацікавленості, тощо..), то це один рівень. А якщо після цього є ще одна пропозиція натиснути - то це другий рівень.</em></label>
+                          <input class="form-control cupAction-calculate" type="number"  id="blockIVR_count" name="countIVR" value="1" min="1" style="width:50%">							
+                        </div>						
+                      </div>
+                    </div>
+                    
+                    <!-- Кількість спроб додзвону стантартно чи більше | Мінімальний час прослуховування -->
+                    <div id="step4" mytitle="Кількість спроб додзвону та мінімальний час прослуховування" style="display:none;" class="cupAction-calc-step-block text-start">					
+                      <div class="form-group" >
+                        <label for="step4_diallCount">Введіть кількість спроб додзвону до контрагента:</label>
+                        <input class="form-control cupAction-calculate" type="number"  id="step4_diallCount" name="diallCount" value="3" min="3" style="width:50%">							
+                      </div>
+                      <p> </p>	
+                      <div class="form-group">
+                        <label for="step4_listenTime">Введіть мінімальний час прослуховування повідомлення:</label>
+                        <input class="form-control cupAction-calculate" type="number"  id="step4_listenTime" name="listenTime" value="1" min="1" style="width:50%">							
+                      </div>		
+                    </div>
+                    
+                    <!-- Текст повідомлення | Кількість повідомлень -->
+                    <div id="step5" mytitle="Текст повідомлення" style="display:none;" class="cupAction-calc-step-block text-start">					
+                      <div class="form-group">
+                        <textarea class="form-control cupAction-calculate" placeholder="Текст повідомлення" id="step5_textMSG" style="width:80%" rows="5" name="textMSG"></textarea>
+                        <label for="step5_textMSG">
+                          Кожен блок із 100 символів коштує: <span> </span> <br>
+                          Всіх символів <span id="step5_countCharsInTextMSG"> </span>, блоків <span id="step5_countBlocksInTextMSG"> </span>
+                        </label>
+                      </div>
+                      <p> </p>	
+                          
+                    </div>
+                
+                    <!-- Озвучення самі (замовник), роботом чи в студії -->
+                    <div id="step6" mytitle="Озвучення повідомлення" style="display:none;" class="cupAction-calc-step-block text-start">					
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step6_voice_v1" name="voice" value="1" checked="checked">
+                        <label class="form-check-label" for="step6_voice_v1">Надасьте свій (файл замовника).<br>Вимоги до аудіо запсу: <br>
+                          <em style="position:relative;left:40px;"> 
+                            Формат: .wav <br>
+                            Біттрейд: 16bit <br>
+                            Частота: 8000 hz <br>
+                            Канальність: mono
+                          </em>
+                        </label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step6_voice_v2" name="voice" value="2">
+                        <label class="form-check-label" for="step6_voice_v2">Згенерувати роботом (файл виконавця).</label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step6_voice_v3" name="voice" value="3">
+                        <label class="form-check-label" for="step6_voice_v3">Озвучити в студії (файл виконавця).</label>
+                      </div>
+                    </div>
+                    
+                    <!-- Вихідний номер SIP чи GSM -->
+                    <div id="step7" mytitle="Вихідна лінія" style="display:none;" class="cupAction-calc-step-block text-start">					
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step7_channel_v1" name="channel" value="1" checked="checked">
+                        <label class="form-check-label" for="step7_channel_v1"> SIP-лінія - 10 каналів. </label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step7_channel_v2" name="channel" value="2">
+                        <label class="form-check-label" for="step7_channel_v2"> SIP-лінія - 100 каналів. </label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step7_channel_v3" name="channel" value="3">
+                        <label class="form-check-label" for="step7_channel_v3"> GSM-лінія - 1 канал </label>
+                      </div>
+                    </div> 
+                    
+                    <!-- Як найшвидше чи за розкладом -->
+                    <div id="step8" mytitle="Темп виконання" style="display:none;" class="cupAction-calc-step-block text-start">					
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step8_Calendar_v1" name="calendar" value="1" checked="checked">
+                        <label class="form-check-label" for="step8_Calendar_v1">Як найшвидше. </label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step8_Calendar_v2" name="calendar" value="2">
+                        <label class="form-check-label" for="step8_Calendar_v2">За розкладом</label>
+                      </div>
+                    </div>				
+                    
+                    <!-- Звіт в CRM чи вивантажити в EXCEL -->
+                    <div id="step9" mytitle="Звіт" style="display:none;" class="cupAction-calc-step-block text-start">					
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step9_CRM_v1" name="CRM" value="1" checked="checked">
+                        <label class="form-check-label" for="step9_CRM_v1">Звітувати у CRM </label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input cupAction-calculate" type="radio" role="switch" id="step9_CRM_v2" name="CRM" value="2">
+                        <label class="form-check-label" for="step9_CRM_v2">Вивантажити Excel</label>
+                      </div>
+                    </div>
+                    
+                    <!-- Контактна інформація --> 
+                    <div id="step10" mytitle="Контактна інформація" style="display:none;" class="cupAction-calc-step-block text-start row">					
+                      <div class="form-group col-md-12">
+                        <input class="form-control cupAction-contacts" type="text" id="step10_clientname" name="clientname" value="" placeholder="Вкажіть ваше ім'я" >
+                        <label class="form-control-label" for="step10_clientname"></label>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <input class="form-control cupAction-contacts" type="text" id="step10_tel" name="tel" value="" placeholder="380123456789" >
+                          <label class="form-control-label" for="step10_tel"></label>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <input class="form-control cupAction-contacts" type="email" id="step10_email" name="email" value="" placeholder="email@example.com" >
+                          <label class="form-control-label" for="step10_email"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </p>
+                  <p id="send_order" style="display:none;"> 
+                    <button id="btn_order" class="btn btn-danger">Замовити</button> 
+                  </p>
+                  <p style="height:900px;"> </p>
+                </div>
+              </div>
+              
+              </div>
+            
+              <!-- Button trigger modal 
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#calcModal">
+                Launch demo modal
+              </button>
+              -->
+              <!-- Modal -->
+              <div class="modal fade no-backdrop" id="calcModal" tabindex="-1" aria-labelledby="calcModalTitle" data-bs-backdrop="false">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header" style="display:block;">
+                    <h1 class="modal-title fs-5" id="calcModalTitle">Modal title</h1>
+                    <!--
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    -->
+                  </div>
+                  <div id="calcModalBody" class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="calcModalClose">Закрити</button>
+                    <button type="button" class="btn btn-danger" style="display:none;" id="calcModalAction" calcModalAction="none">Save changes</button>
+                  </div>
+                  
+                </div>
+              </div>
+              </div>
+              
+              <!-- Тіло кошика -->
+              <div id="bodyBasketList" style="display:none">
+                <p><b>Вартість одного повідомлення:</b> <span id="bodyBasketList_priceOneMsg" class="cupAction-priceOneMsg cupAction-BasketList">4500</span>грн.</p>
+                <p><b>Кількість повідомлень:</b> <span id="bodyBasketList_countMsg" class="cupAction-countMsg cupAction-BasketList">1</span>шт.</p>
+                <p><b>Сума:</b> <span id="bodyBasketList_allPrice" class="cupAction-allPrice cupAction-BasketList">4500</span>грн.</p>
+                <hr>
+                <p><b>В ціну одного повідомлення входить:</b></p>
+                <div style="position:relative;left:40px;width:75%">
+                  <p>Базова вартість одного повідомлення: <span id="bodyBasketList_basePriceOneMsg" class="cupAction-BasketList">0.19</span></p>
+                  <p>Формування контакта: <span id="bodyBasketList_priceDB" class="cupAction-BasketList">0</span></p>
+                  <p>Лише доставлені: <span id="bodyBasketList_paymentFor" class="cupAction-BasketList">0</span></p>
+                  <p>Опрацювання зворотнього відгуку: <span id="bodyBasketList_priceIVR" class="cupAction-BasketList">0</span></p>
+                  <p>Кількість спроб додзвону до контрагента: <span id="bodyBasketList_priceDiallCount" class="cupAction-BasketList">3</span></p>
+                  <p>Мінімальний час прослуховування повідомлення: <span id="bodyBasketList_priceListenTime" class="cupAction-BasketList">1</span></p>
+                  <p>Кількість блоків в повідомленні: <span id="bodyBasketList_countCharsInTextMSG" class="cupAction-BasketList">1</span></p>
+                  <p>Повідомлення: <span id="bodyBasketList_textInMSG" class="cupAction-BasketList">1</span></p>
+                 </div>
+                <p><b>Додаткові налаштування:</b></p>
+                <div style="position:relative;left:40px;width:75%">
+                  <p>Озвучення повідомлення: <span id="bodyBasketList_priceVoice" class="cupAction-BasketList">1</span></p>
+                  <p>Вихідна лінія: <span id="bodyBasketList_priceChannel" class="cupAction-BasketList">1</span></p>
+                  <p>Темп виконання: <span id="bodyBasketList_priceCalendar" class="cupAction-BasketList">1</span></p>
+                  <p>Експорт БД в Excel або в сторонню CRM : <span id="bodyBasketList_priceCRM" class="cupAction-BasketList">1</span></p>
+                 </div>
+                 <p><b>Контактна інформація:</b></p>
+                <div style="position:relative;left:40px;width:75%">
+                  <p>Ваше ім'я: <span id="bodyBasketList_clientname" class="cupAction-BasketList">1</span></p>
+                  <p>Телефон: <span id="bodyBasketList_tel" class="cupAction-BasketList">1</span></p>
+                  <p>Email: <span id="bodyBasketList_email" class="cupAction-BasketList">1</span></p>
+                  
+                 </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+  <!-- End Mein -->
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer-inner">
+            <h2 class="footer-title">Аутсорсинговий відділ продажу</h2>
+            <ul>
+              <li class="">
+                <a href="https://outsorcing.github.io/dialler/">Головна</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="sub-footer-inner">
+
+
+            <div class="copyright">ПП «Центр Управління Персоналом» © 2003-2023 </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/dialler/assets/js/scripts.js"></script>
+
+</body>
+
+</html>

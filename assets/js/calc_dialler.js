@@ -466,14 +466,14 @@ function fcSentOrder(){
 			fcShowModal('error-allert','Будь ласка, введіть правильну електронну пошту');
 			return false;
         } else {
-            var order=$('#bodyBasketList').html();
+      var order=$('#bodyBasketList').html();
 			var data = {
-                company: name,
+        company: name,
 				email: email,
 				phone: phone,
                 order: order
             };
-			var url="apiCalckDialler.php";
+			var url="https://z.osd24.com/calc_dialler/apiCalckDialler.php";
             $.ajax({
                 type: 'POST',
                 url: url,
