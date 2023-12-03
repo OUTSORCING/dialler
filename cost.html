@@ -469,9 +469,18 @@
                       </div>
                     </div>
                   </p>
-                  <p id="send_order" style="display:none;"> 
-                    <button id="btn_order" class="btn btn-danger">Замовити</button> 
-                  </p>
+                  <div class="row justify-content-center">
+                    <div class="col-md-6">
+                      <p id="upToPrice" style="display:none;"> 
+                        <button id="btn_upToPrice" class="btn btn-secondary">Повернутися</button> 
+                      </p>
+                    </div>
+                    <div class="col-md-6">
+                      <p id="send_order" style="display:none;"> 
+                        <button id="btn_order" class="btn btn-danger">Замовити</button> 
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
               
@@ -583,3 +592,10 @@
 </body>
 
 </html>
+
+<style>
+  .form-check-input:checked {
+         background-color: red; /* Змінюємо фон на червоний */
+         border-color: red; /* Змінюємо колір обрамлення на червоний */
+     }
+</style>
