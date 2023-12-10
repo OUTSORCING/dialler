@@ -21,6 +21,6 @@ footer:
   - name: "Головна"
     url: "/"
     weight: 1
-  - name: "Контакти"
-    url: "/contact/"
-    weight: 2
+  # - name: "Контакти"
+  #   url: "/contact/"
+  #   weight: 2
