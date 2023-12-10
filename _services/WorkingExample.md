@@ -148,6 +148,7 @@ description: Демонстрація роботи автоінформатор�
 <script>
  let callAnswered = false;
   let respondButtonClicked = false;
+    let audioPlayer; // Змінна для відтворення аудіо
 
   function appendToOutput(value) {
     const output = document.getElementById('output');
@@ -155,7 +156,6 @@ description: Демонстрація роботи автоінформатор�
     if (!callAnswered) {
       if (output.value === "Здається нам телефонують") {
         showMessage("Натисніть кнопку відповісти");
-        // Додайте клас анімації для кнопки "Відповісти"
         startBlinkAnimation();
         return;
       }
@@ -167,6 +167,17 @@ description: Демонстрація роботи автоінформатор�
       output.value = ''; // Якщо цифри вводяться, очистити значення
       output.value += value;
     }
+    
+    // Зміни в цьому місці: перевірка та зупинка попереднього аудіо
+    if (audioPlayer) {
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+    }
+
+    // Зміни в цьому місці: перевірка для відтворення нового аудіофайлу '2.mp3'
+    if (output.value === '1') {
+      playAudio("/dialler/records/2.mp3");
+    }
   }
 
   function respond() {
@@ -175,6 +186,19 @@ description: Демонстрація роботи автоінформатор�
     if (!respondButtonClicked) {
       output.classList.remove('input-bounce');
       output.value = '...';
+     
+      // Зміни в цьому місці: перевірка та зупинка попереднього аудіо
+      if (audioPlayer) {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+      }
+
+      // Зміни в цьому місці: перевірка для відтворення нового аудіофайлу '2.mp3'
+      if (output.value === '1') {
+        playAudio("/dialler/records/2.mp3");
+      } else {
+        playAudio("/dialler/records/1.mp3");
+      }
 
       // Додатковий код для обробки відповіді
 
@@ -194,6 +218,12 @@ description: Демонстрація роботи автоінформатор�
         retryCall();
       }
     }
+  }
+
+  // Функція для відтворення аудіо
+  function playAudio(filename) {
+    audioPlayer = new Audio(filename);
+    audioPlayer.play();
   }
 
   function reject() {
@@ -249,6 +279,7 @@ description: Демонстрація роботи автоінформатор�
     output.classList.add('input-bounce');
     output.style.animation = '';
   }
+
 
 </script>
 
