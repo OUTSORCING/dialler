@@ -8,23 +8,12 @@ description: Демонстрація роботи автоінформатор�
 
 Уявіть що до вас телефонує наш інформатор та слідкуйте за інструкціями. Коли ви натиснете "Відповісти", відтвориться голосовий файл, **тож відрегулюйте звук на вашому пристрої**. 
 
-
 <style>
     .calculator-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
-
-    #output {
-      width: 300px;
-      text-align: center;
-      font-size: 1.2em;
-      border: 1px solid #e5261f;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      transition: transform 0.3s ease; /* Додавання анімації transform для підпригування */
     }
 
     .input-bounce {
@@ -96,6 +85,14 @@ description: Демонстрація роботи автоінформатор�
       font-size: 1em;
       border: 1px solid #ccc;
       border-radius: 5px;
+      width: 300px;
+      text-align: center;
+      font-size: 1em;
+      border: 1px solid #e5261f;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease; /* Додавання анімації transform для підпригування */
+      
     }
 
     .message-box {
@@ -143,6 +140,7 @@ description: Демонстрація роботи автоінформатор�
     <button class="btn btn-danger btn-block" onclick="reject()">Відхилити</button>
   </div>
 </div>
+<!-- Bootstrap модальне вікно -->
 <br>
 
 <script>
@@ -178,6 +176,15 @@ description: Демонстрація роботи автоінформатор�
     if (output.value === '1') {
       playAudio("/dialler/records/2.mp3");
     }
+    if (output.value === '2') {
+    const wantToRetry = confirm ("УРА! Ловіть промокод на 10%! Просто скажіть менеджеру слово ДІАЛЛЕР!");
+    }
+    if (value === '5') {
+      window.open('/dialler/cost.html', '_blank');
+    }
+    if (value === '8') {
+    playAudio("/dialler/records/3.mp3");
+    }
   }
 
   function respond() {
@@ -199,8 +206,6 @@ description: Демонстрація роботи автоінформатор�
       } else {
         playAudio("/dialler/records/1.mp3");
       }
-
-      // Додатковий код для обробки відповіді
 
       // Встановлюємо флаг, що кнопку відповісти натиснуто
       respondButtonClicked = true;
@@ -231,7 +236,11 @@ description: Демонстрація роботи автоінформатор�
 
     output.classList.remove('input-bounce');
     output.value = 'Дзвінок відхилено';
-
+          if (audioPlayer) {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+      }
+    
     // Додатковий код для обробки відхилення
   }
 
@@ -245,7 +254,7 @@ description: Демонстрація роботи автоінформатор�
       messageBox.style.display = 'none';
       // Приховати кнопку "Замовити дзвінок ще раз" після приховання повідомлення
       hideRetryButton();
-    }, 3000);
+    }, 4000);
   }
 
   function showRetryButton() {
@@ -279,8 +288,6 @@ description: Демонстрація роботи автоінформатор�
     output.classList.add('input-bounce');
     output.style.animation = '';
   }
-
-
 </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
