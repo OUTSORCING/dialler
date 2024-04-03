@@ -28,16 +28,16 @@ let callAnswered = false;
 
     // Зміни в цьому місці: перевірка для відтворення нового аудіофайлу '2.mp3'
     if (output.value === '1') {
-      playAudio("/dialler/records/2.mp3");
+      playAudio("/records/2.mp3");
     }
     if (output.value === '2') {
     const wantToRetry = confirm ("УРА! Ловіть промокод на 10%! Просто скажіть менеджеру слово ДІАЛЛЕР!");
     }
     if (value === '5') {
-      window.open('/dialler/cost.html', '_blank');
+      window.open('/cost.html', '_blank');
     }
     if (value === '8') {
-    playAudio("/dialler/records/3.mp3");
+    playAudio("/records/3.mp3");
     }
   }
 
@@ -56,9 +56,9 @@ let callAnswered = false;
 
       // Зміни в цьому місці: перевірка для відтворення нового аудіофайлу '2.mp3'
       if (output.value === '1') {
-        playAudio("/dialler/records/2.mp3");
+        playAudio("/records/2.mp3");
       } else {
-        playAudio("/dialler/records/1.mp3");
+        playAudio("/records/1.mp3");
       }
 
       // Встановлюємо флаг, що кнопку відповісти натиснуто
