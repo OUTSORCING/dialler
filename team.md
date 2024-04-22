@@ -1,12 +1,12 @@
 ---
-title: Team
-layout: teams
-description: Team
-permalink: "/team/"
+title: Кейси
+layout: cases
+description: Реальні кейси роботи автоінформатора
+permalink: "/cases/"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
 
-# Meet The Team
+# Реальні кейси роботи автоінформатора
 
-Our team of qualified accountants and financial consultants can help your business at any stage of it's growth.
+Наш робот вже довготривалий час допомагає бізнесу на будь - якому етапі його розвитку.

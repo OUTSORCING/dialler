@@ -5,11 +5,9 @@ main:
   - name: "Можливості"
     url: "/services/"
     weight: 2
-
-  # - name: "Команда"
-  #   url: "/team/"
-  #   weight: 3
-
+  - name: "Кейси"
+    url: "/cases/"
+    weight: 3
   - name: "Розрахувати вартість"
     url: "/cost.html"
     weight: 4

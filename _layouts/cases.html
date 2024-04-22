@@ -1,0 +1,63 @@
+---
+layout: default
+bodyClass: "page-cases"
+---
+
+<div class="intro">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+                {{ content }}
+            </div>
+            {% if page.intro_image %}
+            <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+                <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container pt-6 pb-6">
+    <div class="row">
+        {% assign promoted_cases = site.case | where: "promoted", true | sort: "weight" %}
+        {% for case in promoted_cases %}
+        <div class="col-12 col-md-6 mb-2">
+            <div class="case case-summary case-summary-large">
+                {% if case.image %}
+                <div class="case-image">
+                    <img width="90" height="90" alt="{{ case.title }}" class="img-fluid mb-2" src="{{ case.image | relative_url }}" />
+                </div>
+                {% endif %}
+                <div class="case-meta">
+                    <h2 class="case-name"><a href="{{ case.url | relative_url }}">{{ case.title }}</a></h2>
+                    <p class="case-description">{{ case.description }}</p>
+                    {% if case.website %}
+                    <a target="_blank" href="{{ case.website }}" rel="noreferrer">Веб-сайт</a>
+                    {% endif %}
+                </div>
+                <div class="case-content">{{ case.content | truncate: 120 }}</div>
+                <p class="case-name"><a href="{{ case.url | relative_url }}">Читати далі...</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row pt-6 pb-6">
+        {% assign cases = site.case | where: "promoted", empty | sort: "weight" %}
+        {% for case in cases %}
+        <div class="col-12 col-md-4 mb-3">
+            <div class="case case-summary">
+                {% if case.image %}
+                <div class="case-image">
+                    <img width="60" height="60" alt="{{ case.title }}" class="img-fluid mb-2" src="{{ case.image | relative_url }}" />
+                </div>
+                {% endif %}
+                <div class="case-meta">
+                    <h2 class="case-name"><a href="{{ case.url | relative_url }}">{{ case.title }}</a></h2>
+                    <p class="case-description">{{ case.jobtitle }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
