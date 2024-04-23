@@ -22,3 +22,9 @@ footer:
   - name: "Можливості"
     url: "/services/"
     weight: 2
+  - name: "Кейси"
+    url: "/cases/"
+    weight: 3
+  - name: "Розрахувати вартість"
+    url: "/cost.html"
+    weight: 4

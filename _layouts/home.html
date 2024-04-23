@@ -46,7 +46,121 @@ bodyClass: "page-home"
   </div>
 </div>
 
-{% if site.data.features %}
+<section class="testimonial">
+  <div class="container flex">
+      <div class="wrapperr">
+          <div class="testimonial-container" id="testimonial-container"></div>
+          <button id="prev">&lt;</button>
+          <button id="next">&gt;</button>
+      </div>
+  </div>
+  <br>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <a class="button button-primary" href="https://www.google.com/maps/place/Aut%C2%B7sorsynhovyy+Viddil+Prodazhu/@49.8106276,24.0001841,17z/data=!3m1!4b1!4m6!3m5!1s0x473ae7bbf9bbd949:0x5ae2cf6b8e129064!8m2!3d49.8106242!4d24.002759!16s%2Fg%2F1pp2vcs1y?hl=en-US&entry=ttu" target="_blank">Додати відгук</a>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+<script src="/assets/js/commentsGoogle.js"></script>
+<style>
+ .testimonial {
+	background: #fff6f8;
+	margin: 0;
+	padding: 40px 0;
+
+	.testimonial-block {
+		width: 60%;
+		margin: 0 auto;
+
+		@media #{$tablet} {
+			@include flexbox;
+
+			blockquote {
+				-webkit-flex: 1;
+				flex: 1;
+			}
+		}
+	}
+}
+
+.wrapperr {
+    background-color: #ffffff;
+    position: relative;
+    max-width: 72%; /* Замість width: 80vw; для кращої адаптивності */
+    min-height: 25em;
+    border-radius: 1.2em;
+    margin: 0 auto; /* Для центрування блоку */
+    box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+    display: flex;
+    flex-direction: column; 
+  }
+  .testimonial-container {
+    width: 85%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 1.8em 1.2em;
+  }
+  .wrapperr button {
+    font-size: 1.8em;
+    height: 2.2em;
+    width: 2.2em;
+    background-color: #ffffff;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    color: #e5261f;
+    box-shadow: 0 0 1em rgba(1, 17, 39, 0.25);
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  button#next {
+    right: -1.1em;
+  }
+  button#prev {
+    left: -1.1em;
+  }
+  .testimonial-container p {
+    color: #8c8c90;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+  }
+  .testimonial-container img {
+    display: block;
+    margin: 1.8em auto 1.25em auto;
+    border-radius: 50%;
+    width: 4.4em;
+  }
+  .testimonial-container h3 {
+    color: #2d3d67;
+    font-size: 1em;
+    text-align: center;
+  }
+  .testimonial-container h6 {
+    color: #bcc4da;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    text-align: center;
+  }
+  @media screen and (max-width: 650px) {
+    .wrapper {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<!-- {% if site.data.features %}
 <div class="strip strip-grey">
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
     <div class="row justify-content-center"><h2>Наші голоси</h2></div>
@@ -67,4 +181,4 @@ bodyClass: "page-home"
     </div>
   </div>
 </div>
-{% endif %}
+{% endif %} -->
