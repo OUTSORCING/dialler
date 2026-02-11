@@ -207,7 +207,7 @@ function fcShowIVRcalc(action){
 
 function fcCalculate(){
 	console.log("run fcCalculate");
-	const minAllPrice=5500; const minPriceOneMsg=0.3; const minDiallCount=3; const minListenTime=1;  
+	const minAllPrice=5500; const minPriceOneMsg=0.75; const minDiallCount=3; const minListenTime=1;  
 		
 	var priceDB=fcCalculate_OneDB(); console.log("priceDB="+priceDB);
 	if(priceDB =='error'){
