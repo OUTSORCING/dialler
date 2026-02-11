@@ -317,7 +317,7 @@ function fcCalculate_OneDB(){
 		$("#step4_diallCount").prop("disabled", true);
 		$("#step4_listenTime").prop("disabled", true);
 	};
-	if(database==2){priceDB=3.99; 
+	if(database==2){priceDB=4.99; 
 		$("#step2_paymentFor_v1").prop("disabled", false);
 		$("#step4_diallCount").prop("disabled", false);
 		$("#step4_listenTime").prop("disabled", false);
@@ -339,7 +339,7 @@ function fcCalculate_OneDB(){
 		if($('#blockDBcalc_person').is(':checked')){person=1;};
 	
 		console.log("company="+company+" | phone="+phone+" | email="+email+" | lide="+lide+" | person="+person);
-		priceDB=25*company + 4.9*phone + 3.6*email + 22*lide + 55.7*person;
+		priceDB=25*company + 4.9*phone + 3.6*email + 35*lide + 65.7*person;
 		
 		if(priceDB < minPriceForOneDBCreatedHuman){
 			fcShowModal('error-allert','Невірне значення ціни формування однієї компанії='+priceDB);
